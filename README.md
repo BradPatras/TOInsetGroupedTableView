@@ -1,9 +1,5 @@
 # TOInsetGroupedTableView
 
-<p align="center">
-<img src="https://raw.githubusercontent.com/TimOliver/TOInsetGroupedTableView/master/screenshot.jpg" width ="700" />
-</p>
-
 ## Bug scenario:
 OS: iOS 12.0
 device: iPhone 8 Plus simulator (have reproduced on physical device in different context)
