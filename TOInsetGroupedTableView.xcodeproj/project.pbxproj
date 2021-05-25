@@ -15,6 +15,8 @@
 		22DA8E23244063BC003341C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DA8E22244063BC003341C3 /* main.m */; };
 		22DA8E3124417361003341C3 /* TOInsetGroupedTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DA8E3024417361003341C3 /* TOInsetGroupedTableViewTests.m */; };
 		22DA8E382441737B003341C3 /* TOInsetGroupedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 223CA6A9243DB9A600640EC2 /* TOInsetGroupedTableView.m */; };
+		8CEA1C1F265D652700E1B97D /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEA1C1D265D652700E1B97D /* CustomCell.m */; };
+		8CEA1C20265D652700E1B97D /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CEA1C1E265D652700E1B97D /* CustomCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,9 @@
 		22DA8E2E24417361003341C3 /* TOInsetGroupedTableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TOInsetGroupedTableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22DA8E3024417361003341C3 /* TOInsetGroupedTableViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOInsetGroupedTableViewTests.m; sourceTree = "<group>"; };
 		22DA8E3224417361003341C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CEA1C1C265D652700E1B97D /* CustomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		8CEA1C1D265D652700E1B97D /* CustomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		8CEA1C1E265D652700E1B97D /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +97,9 @@
 				223CA69C243DB72500640EC2 /* LaunchScreen.storyboard */,
 				223CA69F243DB72500640EC2 /* Info.plist */,
 				22DA8E22244063BC003341C3 /* main.m */,
+				8CEA1C1C265D652700E1B97D /* CustomCell.h */,
+				8CEA1C1D265D652700E1B97D /* CustomCell.m */,
+				8CEA1C1E265D652700E1B97D /* CustomCell.xib */,
 			);
 			path = TOInsetGroupedTableViewExample;
 			sourceTree = "<group>";
@@ -195,6 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CEA1C20265D652700E1B97D /* CustomCell.xib in Resources */,
 				223CA69E243DB72500640EC2 /* LaunchScreen.storyboard in Resources */,
 				223CA69B243DB72500640EC2 /* Assets.xcassets in Resources */,
 			);
@@ -238,6 +247,7 @@
 				223CA690243DB72400640EC2 /* TOAppDelegate.m in Sources */,
 				22DA8E23244063BC003341C3 /* main.m in Sources */,
 				223CA6AA243DB9A600640EC2 /* TOInsetGroupedTableView.m in Sources */,
+				8CEA1C1F265D652700E1B97D /* CustomCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,8 +396,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6LF3GMKZAB;
+				DEVELOPMENT_TEAM = 7T6CV8799D;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -399,8 +410,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.tim.TOInsetGroupedTableView;
+				PRODUCT_BUNDLE_IDENTIFIER = test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -409,8 +421,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6LF3GMKZAB;
+				DEVELOPMENT_TEAM = 7T6CV8799D;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -422,8 +435,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.tim.TOInsetGroupedTableView;
+				PRODUCT_BUNDLE_IDENTIFIER = test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

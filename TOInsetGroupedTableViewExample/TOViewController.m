@@ -8,6 +8,7 @@
 
 #import "TOViewController.h"
 #import "TOInsetGroupedTableView.h"
+#import "CustomCell.h"
 
 @interface TOViewController ()
 
@@ -23,16 +24,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"TOInsetGroupedTableView";
-    
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Edit"
+
+	UINib *nib = [UINib nibWithNibName:@"CustomCell" bundle:nil];
+	[self.tableView registerNib:nib forCellReuseIdentifier:@"Cell"];
+
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Reload"
                                                                               style:UIBarButtonItemStylePlain
                                                                              target:self
-                                                                             action:@selector(editButtonTapped)];
+                                                                             action:@selector(reloadButtonTapped)];
 }
 
-- (void)editButtonTapped
+- (void)reloadButtonTapped
 {
-    [self.tableView setEditing:!self.tableView.editing animated:YES];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table View Data Source -
@@ -56,12 +60,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
-                                      reuseIdentifier:cellIdentifier];
-    }
-    
+    CustomCell *cell = (CustomCell *) [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+
     cell.textLabel.text = [NSString stringWithFormat:@"Cell %ld", (long)indexPath.row];
     
     return cell;
